@@ -70,7 +70,7 @@ class Tables extends React.Component {
   render() {
     return (
       <>
-        <div className="content">
+        <div className="card-tasks">
           <Row>
             <Col md="12">
               <Card>
