@@ -49,5 +49,9 @@
   "devDependencies": {
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8"
-  }
+  },
+  "engines": {
+    "npm": "5.7.1",
+    "node": "9.5.0"
+  },
 }
