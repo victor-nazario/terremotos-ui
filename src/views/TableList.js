@@ -66,6 +66,32 @@ const Users = () => {
   })
 };
 
+const Admin = () => {
+  const [admins, setAdmins] = useState([]);
+
+  const fetchAdmins = () => {
+    axios.get("http://localhost:8085/admin/fetch").then(res => {
+      console.log(res);
+      setAdmins(res.data);
+    });
+  }
+
+  useEffect(() => {
+    fetchAdmins();
+  }, []);
+
+  return admins.map((admin, index) => {
+    return (
+        <tr>
+          <td>{admin.id}</td>
+          <td>{admin.firstName} {admin.lastName}</td>
+          <td>{admin.city}</td>
+          <td>{admin.email}</td>
+        </tr>
+    )
+  })
+};
+
 class Tables extends React.Component {
   render() {
     return (
@@ -75,7 +101,30 @@ class Tables extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">Consumer Table</CardTitle>
+                  <CardTitle tag="h4">Registered Admins</CardTitle>
+                </CardHeader>
+                <CardBody>
+                  <Table className="tablesorter" responsive>
+                    <thead className="text-primary">
+                    <tr>
+                      <th>System ID</th>
+                      <th>Name</th>
+                      <th>City</th>
+                      <th>Email Adress</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <Admin />
+                    </tbody>
+                  </Table>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="12">
+              <Card>
+                <CardHeader>
+                  <CardTitle tag="h4">Registered Consumers</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
@@ -98,7 +147,7 @@ class Tables extends React.Component {
             <Col md="12">
               <Card>
                 <CardHeader>
-                  <CardTitle tag="h4">Supplier Table</CardTitle>
+                  <CardTitle tag="h4">Registered Suppliers</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Table className="tablesorter" responsive>
