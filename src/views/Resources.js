@@ -21,7 +21,7 @@ const Resource = props => {
   const [resources, setResource] = useState([]);
 
   const fetchresources = () => {
-    if (props.name == 'all') {
+    if (props.name === 'all') {
       axios.get("http://localhost:8085/resource/fetch").then(res => {
       console.log(res);  
       setResource(res.data);
@@ -37,7 +37,7 @@ const Resource = props => {
 
   useEffect(() => {
     fetchresources();
-  });
+  }, [props.name]);
 
   return resources.map((resource, index) => {
     return (
@@ -75,7 +75,6 @@ class Resources extends React.Component {
               <CardHeader>
                   <Row>
                     <Col className="text-left" sm="6">
-                      <h5 className="card-category"></h5>
                       <CardTitle tag="h2">Resource Table</CardTitle>
                     </Col>
                     <Col sm="6">
