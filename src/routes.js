@@ -42,7 +42,7 @@ var routes = [
   {
     path: "/tables",
     name: "Manage Users",
-    icon: "tim-icons icon-puzzle-10",
+    icon: "tim-icons icon-single-02",
     component: TableList,
     layout: "/admin"
   },
@@ -61,24 +61,10 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "tim-icons icon-bell-55",
-    component: Notifications,
-    layout: "/admin"
-  },
-  {
     path: "/user-profile",
     name: "User Profile",
-    icon: "tim-icons icon-single-02",
+    icon: "tim-icons icon-badge",
     component: UserProfile,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "tim-icons icon-align-center",
-    component: Typography,
     layout: "/admin"
   }
   

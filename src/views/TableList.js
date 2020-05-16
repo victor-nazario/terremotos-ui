@@ -18,7 +18,7 @@ const Supplier = () => {
   const [suppliers, setSupplier] = useState([]);
 
   const fetchSuppliers = () => {
-    axios.get("http://localhost:8085/supplier/fetch").then(res => {
+    axios.get("http://terremotos-api.herokuapp.com/supplier/fetch").then(res => {
       console.log(res);  
       setSupplier(res.data);
     });
@@ -34,7 +34,7 @@ const Supplier = () => {
         <td>{supplier.id}</td>
         <td>{supplier.firstName} {supplier.lastName}</td>
         <td>{supplier.city}</td>
-        <td>{supplier.zipCode}</td>
+        <td>{supplier.email}</td>
       </tr>
     )
   })
@@ -44,7 +44,7 @@ const Users = () => {
   const [users, setUser] = useState([]);
 
   const fetchUsers = () => {
-    axios.get("http://localhost:8085/consumer/fetch").then(res => {
+    axios.get("http://terremotos-api.herokuapp.com/consumer/fetch").then(res => {
       console.log(res);  
       setUser(res.data);
     });
@@ -60,7 +60,7 @@ const Users = () => {
         <td>{user.id}</td>
         <td>{user.firstName} {user.lastName}</td>
         <td>{user.city}</td>
-        <td>{user.zipCode}</td>
+        <td>{user.email}</td>
       </tr>
     )
   })
@@ -70,7 +70,7 @@ const Admin = () => {
   const [admins, setAdmins] = useState([]);
 
   const fetchAdmins = () => {
-    axios.get("http://localhost:8085/admin/fetch").then(res => {
+    axios.get("http://terremotos-api.herokuapp.com/admin/fetch").then(res => {
       console.log(res);
       setAdmins(res.data);
     });
@@ -110,7 +110,7 @@ class Tables extends React.Component {
                       <th>System ID</th>
                       <th>Name</th>
                       <th>City</th>
-                      <th>Email Adress</th>
+                      <th>Email Address</th>
 
                     </tr>
                     </thead>
@@ -130,10 +130,10 @@ class Tables extends React.Component {
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>ID</th>
+                        <th>System ID</th>
                         <th>Name</th>
                         <th>City</th>
-                        <th>zipCode</th>
+                        <th>Email Address</th>
                         
                       </tr>
                     </thead>
@@ -153,10 +153,10 @@ class Tables extends React.Component {
                   <Table className="tablesorter" responsive>
                     <thead className="text-primary">
                       <tr>
-                        <th>ID</th>
+                        <th>System ID</th>
                         <th>Name</th>
                         <th>City</th>
-                        <th>zipCode</th>
+                        <th>Email Address</th>
                       </tr>
                     </thead>
                     <tbody>
