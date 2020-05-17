@@ -23,6 +23,8 @@ import { Line, Bar } from "react-chartjs-2";
 
 import Tables from "./TableList";
 
+import Chart3 from "./ChartList";
+
 // reactstrap components
 import {
   Button,
@@ -74,8 +76,8 @@ class Dashboard extends React.Component {
                 <CardHeader>
                   <Row>
                     <Col className="text-left" sm="6">
-                      <h5 className="card-category">Total Shipments</h5>
-                      <CardTitle tag="h2">Performance</CardTitle>
+                      <h5 className="card-category">Resource count per category</h5>
+                      <CardTitle tag="h2">Total Resources</CardTitle>
                     </Col>
                     <Col sm="6">
                       <ButtonGroup
@@ -154,12 +156,7 @@ class Dashboard extends React.Component {
                   </Row>
                 </CardHeader>
                 <CardBody>
-                  <div className="chart-area">
-                    <Line
-                      data={chartExample1[this.state.bigChartData]}
-                      options={chartExample1.options}
-                    />
-                  </div>
+                  <Chart3 />
                 </CardBody>
               </Card>
             </Col>

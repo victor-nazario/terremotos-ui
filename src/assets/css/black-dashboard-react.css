@@ -12497,7 +12497,7 @@ textarea.form-control {
   .card-user .card-description {
     margin-top: 30px; }
 
-.card-tasks {
+.card-tasks .table-full-width {
   height: 473px; }
   .card-tasks .table-full-width {
     max-height: 410px;
@@ -12528,5 +12528,14 @@ textarea.form-control {
 
 select.form-control option {
   color: #888; }
+
+  .my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
 
 /*# sourceMappingURL=black-dashboard-react.css.map */
