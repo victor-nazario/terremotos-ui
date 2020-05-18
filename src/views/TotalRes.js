@@ -8,49 +8,49 @@ const Chart3 = () => {
     let r = {};
   
     const fetchData = () => {
-        axios.get("http://terremotos-api.herokuapp.com/babyfood/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/babyfood/count/all").then(res => {
             r.bf = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/powergenerator/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/powergenerator/count/all").then(res => {
             r.pg = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/battery/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/battery/count/all").then(res => {
             r.ba = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/cannedfood/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/cannedfood/count/all").then(res => {
             r.cf = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/clothing/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/clothing/count/all").then(res => {
             r.cl = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/diesel/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/diesel/count/all").then(res => {
             r.d = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/tool/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/tool/count/all").then(res => {
             r.t = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/gasoline/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/gasoline/count/all").then(res => {
             r.gas = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/heavyequipment/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/heavyequipment/count/all").then(res => {
             r.he = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/ice/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/ice/count/all").then(res => {
             r.ice = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/medicaldevices/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/medicaldevices/count/all").then(res => {
             r.md = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/medication/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/medication/count/all").then(res => {
             r.meds = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/propane/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/propane/count/all").then(res => {
             r.pr = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/water/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/water/count/all").then(res => {
             r.w = res.data;
         });
-        setTimeout(function(){ axios.get("http://terremotos-api.herokuapp.com/dryfood/count/all").then(res => {
+        setTimeout(function(){ axios.get("https://terremotos-api.herokuapp.com/dryfood/count/all").then(res => {
             r.df = res.data;
             console.log(r);
             setChartData({

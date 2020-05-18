@@ -17,7 +17,7 @@ const Supplier = () => {
   const [suppliers, setSupplier] = useState([]);
 
   const fetchSuppliers = () => {
-    axios.get("http://terremotos-api.herokuapp.com/supplier/fetch").then(res => {
+    axios.get("https://terremotos-api.herokuapp.com/supplier/fetch").then(res => {
       console.log(res);  
       setSupplier(res.data);
     });
@@ -43,7 +43,7 @@ const Users = () => {
   const [users, setUser] = useState([]);
 
   const fetchUsers = () => {
-    axios.get("http://terremotos-api.herokuapp.com/consumer/fetch").then(res => {
+    axios.get("https://terremotos-api.herokuapp.com/consumer/fetch").then(res => {
       console.log(res);  
       setUser(res.data);
     });
@@ -69,7 +69,7 @@ const Admin = () => {
   const [admins, setAdmins] = useState([]);
 
   const fetchAdmins = () => {
-    axios.get("http://terremotos-api.herokuapp.com/admin/fetch").then(res => {
+    axios.get("https://terremotos-api.herokuapp.com/admin/fetch").then(res => {
       console.log(res);
       setAdmins(res.data);
     });

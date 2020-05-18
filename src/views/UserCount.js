@@ -15,13 +15,13 @@ const ChartUser = () => {
     let u = {};
   
     const fetchData = () => {
-        axios.get("http://terremotos-api.herokuapp.com/admin/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/admin/count/all").then(res => {
             u.admin = res.data;
         });
-        axios.get("http://terremotos-api.herokuapp.com/supplier/count/all").then(res => {
+        axios.get("https://terremotos-api.herokuapp.com/supplier/count/all").then(res => {
             u.supplier = res.data;
         });
-        setTimeout(function(){ axios.get("http://terremotos-api.herokuapp.com/consumer/count/all").then(res => {
+        setTimeout(function(){ axios.get("https://terremotos-api.herokuapp.com/consumer/count/all").then(res => {
             u.consumer = res.data;
             console.log(u);
             setChartData({

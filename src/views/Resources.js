@@ -22,12 +22,12 @@ const Resource = (props) => {
 
   const fetchresources = () => {
     if (props.name === 'all') {
-      axios.get("http://terremotos-api.herokuapp.com/resource/fetch").then(res => {
+      axios.get("https://terremotos-api.herokuapp.com/resource/fetch").then(res => {
       console.log(res);  
       setResource(res.data);
       });
     } else {
-      axios.get("http://terremotos-api.herokuapp.com/resource/available").then(res => {
+      axios.get("https://terremotos-api.herokuapp.com/resource/available").then(res => {
       console.log(res);  
       setResource(res.data);
       });
