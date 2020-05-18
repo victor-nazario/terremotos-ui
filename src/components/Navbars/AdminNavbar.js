@@ -168,6 +168,11 @@ class AdminNavbar extends React.Component {
                         New resources have been added
                       </DropdownItem>
                     </NavLink>
+                    <NavLink tag="li">
+                      <DropdownItem className="nav-item">
+                        Julius Ortiz supplied new swimsuits
+                      </DropdownItem>
+                    </NavLink>
                   </DropdownMenu>
                 </UncontrolledDropdown>
                 <UncontrolledDropdown nav>
