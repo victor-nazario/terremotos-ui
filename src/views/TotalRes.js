@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import { Line, Bar } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 const Chart3 = () => {
     const [chartData, setChartData] = useState({});

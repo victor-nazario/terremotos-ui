@@ -7,12 +7,13 @@ import { Line, Bar } from "react-chartjs-2";
 
 import Tables from "./TableList";
 
-import Chart3 from "./ChartList";
+import Chart3 from "./TotalRes";
+import Chart1 from "./UserCount";
+
 
 // reactstrap components
 import {
   Button,
-  ButtonGroup,
   Card,
   CardHeader,
   CardBody,
@@ -32,8 +33,6 @@ import {
 
 // core components
 import {
-  chartExample1,
-  chartExample2,
   chartExample3,
   chartExample4
 } from "variables/charts.js";
@@ -73,23 +72,7 @@ class Dashboard extends React.Component {
           </Row>
           <Row>
             <Col lg="4">
-              <Card className="card-chart">
-                <CardHeader>
-                  <h5 className="card-category">Total Shipments</h5>
-                  <CardTitle tag="h3">
-                    <i className="tim-icons icon-bell-55 text-info" />{" "}
-                    763,215
-                  </CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <div className="chart-area">
-                    <Line
-                      data={chartExample2.data}
-                      options={chartExample2.options}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
+              <Chart1 />
             </Col>
             <Col lg="4">
               <Card className="card-chart">

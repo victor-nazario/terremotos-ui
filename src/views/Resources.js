@@ -17,7 +17,7 @@ import {
 } from "reactstrap";
 
 
-const Resource = props => {
+const Resource = (props) => {
   const [resources, setResource] = useState([]);
 
   const fetchresources = () => {
