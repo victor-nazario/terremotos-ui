@@ -9,65 +9,48 @@ const Chart3 = () => {
   
     const fetchData = () => {
         axios.get("http://terremotos-api.herokuapp.com/babyfood/count/all").then(res => {
-            // console.log(res);  
             r.bf = res.data;
         });
-
         axios.get("http://terremotos-api.herokuapp.com/powergenerator/count/all").then(res => {
-            // console.log(res);  
             r.pg = res.data;
         });
-
         axios.get("http://terremotos-api.herokuapp.com/battery/count/all").then(res => {
-            // console.log(res);  
             r.ba = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/cannedfood/count/all").then(res => {
-            // console.log(res);  
             r.cf = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/clothing/count/all").then(res => {
-            // console.log(res);  
             r.cl = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/diesel/count/all").then(res => {
-            // console.log(res);  
             r.d = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/tool/count/all").then(res => {
-            // console.log(res);  
             r.t = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/gasoline/count/all").then(res => {
-            // console.log(res);  
             r.gas = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/heavyequipment/count/all").then(res => {
-            // console.log(res);  
             r.he = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/ice/count/all").then(res => {
-            // console.log(res);  
             r.ice = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/medicaldevices/count/all").then(res => {
-            // console.log(res);  
             r.md = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/medication/count/all").then(res => {
-            // console.log(res);  
             r.meds = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/propane/count/all").then(res => {
-            // console.log(res);  
             r.pr = res.data;
         });
         axios.get("http://terremotos-api.herokuapp.com/water/count/all").then(res => {
-            // console.log(res);  
             r.w = res.data;
         });
         setTimeout(function(){ axios.get("http://terremotos-api.herokuapp.com/dryfood/count/all").then(res => {
-            // console.log(res);  
             r.df = res.data;
             console.log(r);
             setChartData({
@@ -77,9 +60,9 @@ const Chart3 = () => {
                     {
                       label: "Resource",
                       fill: true,
-                      backgroundColor: ["rgba(119,52,169,0)"],
-                      hoverBackgroundColor: ["rgba(119,52,169,0)"],
-                      borderColor: "#d048b6",
+                      backgroundColor: ["rgba(29,140,248,0.2)"],
+                      hoverBackgroundColor: ["rgba(29,140,248,0.2)"],
+                      borderColor: "#1f8ef1",
                       borderWidth: 2,
                       borderDash: [],
                       borderDashOffset: 0.0,
@@ -87,29 +70,8 @@ const Chart3 = () => {
                     }
                   ]
               });
-        });  }, 5000);
-        axios.get("http://terremotos-api.herokuapp.com/dryfood/count/all").then(res => {
-            // console.log(res);  
-            r.df = res.data;
-            console.log(r);
-            setChartData({
-                labels: ["Baby Food", "Canned Food", "Dry Food", "Water", "Battery", "Propane", "Tool", "PowerGen", "Ice", 
-                        "Medical Devices", "Medications", "Heavy Equipment", "Gas", "Diesel", "Clothing"],
-                datasets: [
-                    {
-                      label: "Resource",
-                      fill: true,
-                      backgroundColor: ["rgba(119,52,169,0)"],
-                      hoverBackgroundColor: ["rgba(119,52,169,0)"],
-                      borderColor: "#d048b6",
-                      borderWidth: 2,
-                      borderDash: [],
-                      borderDashOffset: 0.0,
-                      data: [r.bf, r.cf, r.df, r.w, r.ba, r.pr, r.t, r.pg, r.ice, r.md, r.meds, r.he, r.gas, r.d, r.cl]
-                    }
-                  ]
-              });
-        });      
+        });  }, 2000);
+            
     }
   
     useEffect(() => {
@@ -149,7 +111,7 @@ const Chart3 = () => {
                 {
                 gridLines: {
                     drawBorder: false,
-                    color: "rgba(225,78,202,0.1)",
+                    color: "rgba(29,140,248,0.0)",
                     zeroLineColor: "transparent"
                 },
                 ticks: {
@@ -164,7 +126,7 @@ const Chart3 = () => {
                 {
                 gridLines: {
                     drawBorder: false,
-                    color: "rgba(225,78,202,0.1)",
+                    color: "rgba(29,140,248,0.1)",
                     zeroLineColor: "transparent"
                 },
                 ticks: {
@@ -181,21 +143,3 @@ const Chart3 = () => {
 };
 
 export default Chart3;
-
-/* <Card className="card-chart">
-<CardHeader>
-  <h5 className="card-category">Daily Sales</h5>
-  <CardTitle tag="h3">
-    <i className="tim-icons icon-delivery-fast text-primary" />{" "}
-    3,500€
-  </CardTitle>
-</CardHeader>
-<CardBody>
-  <div className="chart-area">
-    <Bar
-      data={chartExample3.data}
-      options={chartExample3.options}
-    />
-  </div>
-</CardBody>
-</Card> */
