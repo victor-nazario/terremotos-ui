@@ -100,7 +100,7 @@ class Statistics extends React.Component {
                             Weekly
                           </span>
                           <span className="d-block d-sm-none">
-                            <i className="tim-icons icon-single-02" />
+                            <i className="tim-icons icon-calendar-60" />
                           </span>
                         </Button>
                         <Button

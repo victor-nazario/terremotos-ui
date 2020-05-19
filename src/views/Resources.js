@@ -114,7 +114,7 @@ class Resources extends React.Component {
                             All
                           </span>
                           <span className="d-block d-sm-none">
-                            <i className="tim-icons icon-single-02" />
+                            <i className="tim-icons icon-notes" />
                           </span>
                         </Button>
                         <Button
@@ -136,7 +136,7 @@ class Resources extends React.Component {
                             Available
                           </span>
                           <span className="d-block d-sm-none">
-                            <i className="tim-icons icon-gift-2" />
+                            <i className="tim-icons icon-check-2" />
                           </span>
                         </Button>
                       </ButtonGroup>
