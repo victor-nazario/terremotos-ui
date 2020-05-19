@@ -20,12 +20,12 @@ const Resource = (props) => {
 
   const fetchresources = () => {
     if (props.name === 'weekly') {
-      axios.get("http://terremotos-api.herokuapp.com/resource/lastWeek").then(res => {
+      axios.get("https://terremotos-api.herokuapp.com/resource/lastWeek").then(res => {
       console.log(res);
       setResource(res.data);
       });
     } else {
-      axios.get("http://terremotos-api.herokuapp.com/resource/lastDay").then(res => {
+      axios.get("https://terremotos-api.herokuapp.com/resource/lastDay").then(res => {
       console.log(res);
       setResource(res.data);
       });
