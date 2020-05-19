@@ -1,8 +1,6 @@
-
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import classNames from "classnames";
-//terremotos-api.herokuapp.com
 // reactstrap components
 import {
   Button,
@@ -13,7 +11,6 @@ import {
   CardTitle,
   Table,
   Row,
-  UncontrolledTooltip,
   Col
 } from "reactstrap";
 
@@ -22,14 +19,14 @@ const Resource = (props) => {
   const [resources, setResource] = useState([]);
 
   const fetchresources = () => {
-    if (props.name === 'all') {
-      axios.get("https://terremotos-api.herokuapp.com/resource/fetch").then(res => {
-      console.log(res);  
+    if (props.name === 'weekly') {
+      axios.get("http://terremotos-api.herokuapp.com/resource/lastWeek").then(res => {
+      console.log(res);
       setResource(res.data);
       });
     } else {
-      axios.get("https://terremotos-api.herokuapp.com/resource/available").then(res => {
-      console.log(res);  
+      axios.get("http://terremotos-api.herokuapp.com/resource/lastDay").then(res => {
+      console.log(res);
       setResource(res.data);
       });
     }
@@ -48,28 +45,17 @@ const Resource = (props) => {
         <td>&#36; {resource.price}</td>
         <td>{resource.category}</td>
         <td>{resource.available.toString().toUpperCase()}</td>
-        <td className="td-actions">
-          <Button
-            color="link"
-            id="tooltip636901683"
-            title=""
-            type="button"
-            onClick={()=> window.open(resource.mapURL, "_blank")}
-          >
-            <i className="tim-icons icon-square-pin text-info" />
-          </Button>
-        </td>
       </tr>
     )
   })
 };
 
 
-class Resources extends React.Component {
+class Statistics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tableData: "all"
+      tableData: "weekly"
     };
   }
   setTableData = name => {
@@ -83,7 +69,7 @@ class Resources extends React.Component {
         <div className="content">
           <Row>
             <Col md="12">
-              <Card>
+              <Card className="card-tasks">
               <CardHeader>
                   <Row>
                     <Col className="text-left" sm="6">
@@ -97,12 +83,12 @@ class Resources extends React.Component {
                         <Button
                           tag="label"
                           className={classNames("btn-simple", {
-                            active: this.state.tableData === "all"
+                            active: this.state.tableData === "weekly"
                           })}
                           color="info"
                           id="0"
                           size="sm"
-                          onClick={() => this.setTableData("all")}
+                          onClick={() => this.setTableData("weekly")}
                         >
                           <input
                             defaultChecked
@@ -111,7 +97,7 @@ class Resources extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            All
+                            Weekly
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-single-02" />
@@ -123,9 +109,9 @@ class Resources extends React.Component {
                           size="sm"
                           tag="label"
                           className={classNames("btn-simple", {
-                            active: this.state.tableData === "available"
+                            active: this.state.tableData === "daily"
                           })}
-                          onClick={() => this.setTableData("available")}
+                          onClick={() => this.setTableData("daily")}
                         >
                           <input
                             className="d-none"
@@ -133,7 +119,7 @@ class Resources extends React.Component {
                             type="radio"
                           />
                           <span className="d-none d-sm-block d-md-block d-lg-block d-xl-block">
-                            Available
+                            Daily
                           </span>
                           <span className="d-block d-sm-none">
                             <i className="tim-icons icon-gift-2" />
@@ -144,21 +130,22 @@ class Resources extends React.Component {
                   </Row>
                 </CardHeader>
                 <CardBody>
-                  <Table className="tablesorter" responsive>
-                    <thead className="text-primary">
-                      <tr>
-                        <th>Name</th>
-                        <th>Brand</th>
-                        <th>Price</th>
-                        <th>Category</th>
-                        <th>Available</th>
-                        <th>Location</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <Resource name = {this.state.tableData}/>
-                    </tbody>
-                  </Table>
+                    <div className="table-full-width table-responsive">
+                    <Table className="tablesorter" responsive>
+                        <thead className="text-primary">
+                        <tr>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Available</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <Resource name = {this.state.tableData}/>
+                        </tbody>
+                    </Table>
+                    </div>
                 </CardBody>
               </Card>
             </Col>
@@ -169,4 +156,4 @@ class Resources extends React.Component {
   }
 }
 
-export default Resources;
+export default Statistics;
