@@ -73,7 +73,7 @@ class Statistics extends React.Component {
               <CardHeader>
                   <Row>
                     <Col className="text-left" sm="6">
-                      <CardTitle tag="h2">Resource Table</CardTitle>
+                      <CardTitle tag="h2">Resources Ordered</CardTitle>
                     </Col>
                     <Col sm="6">
                       <ButtonGroup
