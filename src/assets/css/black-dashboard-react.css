@@ -12387,7 +12387,7 @@ textarea.form-control {
     margin-top: 30px;
     padding: 0 10px; }
   .card-chart .chart-area {
-    height: 220px;
+    height: 500px;
     width: 100%; }
   .card-chart .card-footer {
     margin-top: 15px; }
@@ -12401,7 +12401,7 @@ textarea.form-control {
       margin: 0; }
   .card-chart.card-chart-pie .chart-area {
     padding: 10px 0 25px;
-    height: auto; }
+    /* height: auto; } */
   .card-chart.card-chart-pie .card-title {
     margin-bottom: 10px; }
     .card-chart.card-chart-pie .card-title i {
@@ -12528,15 +12528,6 @@ textarea.form-control {
 
 select.form-control option {
   color: #888; }
-
-  .my-custom-scrollbar {
-    position: relative;
-    height: 200px;
-    overflow: auto;
-    }
-    .table-wrapper-scroll-y {
-    display: block;
-    }
 
 
 /*# sourceMappingURL=black-dashboard-react.css.map */

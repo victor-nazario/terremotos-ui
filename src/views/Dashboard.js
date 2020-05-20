@@ -1,11 +1,8 @@
 
 import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
 
-import Tables from "./TableList";
 import ATable from "./AgregateTable";
 import Chart3 from "./TotalRes";
 import Chart1 from "./UserCount";
@@ -13,22 +10,12 @@ import Chart1 from "./UserCount";
 
 // reactstrap components
 import {
-  Button,
   Card,
   CardHeader,
   CardBody,
   CardTitle,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  Label,
-  FormGroup,
-  Input,
-  Table,
   Row,
-  Col,
-  UncontrolledTooltip
+  Col
 } from "reactstrap";
 
 // core components
@@ -71,10 +58,13 @@ class Dashboard extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col lg="4">
+            <Col lg="6" md="12">
               <Chart1 />
             </Col>
-            <Col lg="4">
+            <Col lg="6" md="12">
+              <ATable />
+            </Col>
+            {/* <Col lg="4">
               <Card className="card-chart">
                 <CardHeader>
                   <h5 className="card-category">Daily Sales</h5>
@@ -110,16 +100,16 @@ class Dashboard extends React.Component {
                   </div>
                 </CardBody>
               </Card>
-            </Col>
+            </Col> */}
           </Row>
-          <Row>
+          {/* <Row>
             <Col lg="6" md="12">
               <ATable />
             </Col>
             <Col lg="6" md="12">
-              {/* <Tables />                    */}
+              {/* <Tables />                  
             </Col>
-          </Row>
+          </Row> */}
         </div>
       </>
     );
