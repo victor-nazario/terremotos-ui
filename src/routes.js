@@ -42,21 +42,6 @@ var routes = [
     icon: "tim-icons icon-single-02",
     component: TableList,
     layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "tim-icons icon-atom",
-    component: Icons,
-    layout: "/admin"
-  },
-  {
-    path: "/user-profile",
-    name: "User Profile",
-    icon: "tim-icons icon-badge",
-    component: UserProfile,
-    layout: "/admin"
-  }
-  
+  }  
 ];
 export default routes;

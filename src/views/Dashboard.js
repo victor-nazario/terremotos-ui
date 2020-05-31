@@ -1,7 +1,5 @@
 
 import React from "react";
-// react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
 
 import ATable from "./AgregateTable";
 import Chart3 from "./TotalRes";
@@ -17,12 +15,6 @@ import {
   Row,
   Col
 } from "reactstrap";
-
-// core components
-import {
-  chartExample3,
-  chartExample4
-} from "variables/charts.js";
 
 class Dashboard extends React.Component {
   constructor(props) {

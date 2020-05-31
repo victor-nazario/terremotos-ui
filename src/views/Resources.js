@@ -46,7 +46,7 @@ const Resource = (props) => {
         <td>{resource.name}</td>
         <td>{resource.brand}</td>
         <td>&#36; {resource.price}</td>
-        <td>{resource.category}</td>
+        <td>{resource.category.toUpperCase()}</td>
         <td>{resource.available.toString().toUpperCase()}</td>
         <td className="td-actions">
           <Button
